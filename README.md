@@ -43,6 +43,8 @@ VVS, verileri Sui Network üzerinde güvenli bir şekilde akıllı kontrat arac�
 Bu kod, VVS gereksinimleri gereği ilk aşama olarak aşağıdaki özelliklerini sağlar:
 
 ```
+DataVault yapısı: Veri kasasını temsil eder, veri sahibini (owner) ve verileri (data) içerir.
+
 create() metodu, yeni bir veri kasası oluşturur.
 
 add_data() metodu, veri kasasına veri ekler.
