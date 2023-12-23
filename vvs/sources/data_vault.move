@@ -19,7 +19,7 @@ module basic::storage {
         transfer::public_transfer(DataStore {
             id: object::new(ctx),
             owner: tx_context::sender(ctx),
-            data: string::utf8("")
+            data: string::utf8(b"My Private Data!")
         }, tx_context::sender(ctx));
     }
 
