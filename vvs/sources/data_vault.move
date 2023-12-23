@@ -1,37 +1,37 @@
-module basic::storage {
+// SPDX-License-Identifier: Apache-2.0
 
-    use std::string;
+module vvs::Storage {
+    use sui::transfer;
     use sui::object::{Self, UID};
     use sui::tx_context::{Self, TxContext};
 
-    /// A data store.
-    struct DataStore has key, store {
+    /// Storage struct to hold the string message
+    struct Storage has key {
         id: UID,
-        data: string::String
+        owner: address,
+        message: vector<u8>
     }
 
-    public fun owner(store: &DataStore): address {
-        store.owner
+    public fun owner(storage: &Storage): address {
+        storage.owner
     }
 
-    /// Create a new data store.
-    public entry fun create(ctx: &mut TxContext) {
-        transfer::public_transfer(DataStore {
+    public fun getMessage(storage: &Storage): vector<u8> {
+        storage.message
+    }
+
+    /// Create and share a Storage object with a string message.
+    public entry fun create(ctx: &mut TxContext, message: vector<u8>) {
+        transfer::share_object(Storage {
             id: object::new(ctx),
             owner: tx_context::sender(ctx),
-            data: string::utf8(b"My Private Data!")
-        }, tx_context::sender(ctx));
+            message: message
+        })
     }
 
-    /// Write data to a data store.
-    public entry fun write_data(store: &mut DataStore, data: string::String, ctx: &TxContext) {
-        assert!(store.owner == tx_context::sender(ctx), 0);
-        store.data = data;
-    }
-
-    /// Read data from a data store.
-    public entry fun read_data(store: &DataStore, ctx: &TxContext): string::String {
-        assert!(store.owner == tx_context::sender(ctx), 0);
-        store.data
+    /// Set message (only runnable by the Storage owner)
+    public entry fun setMessage(storage: &mut Storage, message: vector<u8>, ctx: &TxContext) {
+        assert!(storage.owner == tx_context::sender(ctx), 0);
+        storage.message = message;
     }
 }
