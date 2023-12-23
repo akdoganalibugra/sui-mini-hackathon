@@ -29,8 +29,37 @@ Veritas Vault Service, kullanıcıların güvenli bir şekilde özel verilerini 
 ## İş Akışı
 
 1. Kullanıcılar, Sui Network üzerinde geliştirilen Move akıllı kontratı aracılığıyla blok zincire özel verilerini güvenli bir şekilde gönderir.
-2. Akıllı kontrat, bu verileri şifreleyerek güvenli bir şekilde depolar ve sadece sahibi tarafından erişilebilecek şekilde saklar.
+2. Akıllı kontrat, bu verileri güvenli bir şekilde depolar ve sadece sahibi tarafından erişilebilecek şekilde saklar.
 3. Kullanıcılar, kendi özel anahtarları ile akıllı kontrat aracılığıyla verilerine erişebilirler.
 
+## Teknik
+
+### Güvenlik
+
+VVS, verileri Sui Network üzerinde güvenli bir şekilde akıllı kontrat aracılığıyla depolar. Verilerin sahipliği, kullanıcı adresinin özel anahtarı kullanılarak yapılır. Bu sayede, veriler sadece kullanıcının kendisi tarafından okunabilir.
+
+### Akıllı Kontrat
+
+Bu kod, VVS gereksinimleri gereği ilk aşama olarak aşağıdaki özelliklerini sağlar:
+
+```
+create() metodu, yeni bir veri kasası oluşturur.
+
+add_data() metodu, veri kasasına veri ekler.
+
+get_data() metodu, veri kasasından veri alır.
+```
+## Gelecekteki Geliştirmeler
+
+VVS projesinin gelecekteki geliştirmeleri arasında şunlar yer almaktadır:
+
+- Akıllı kontrat update & optimizasyon
+- Frontend ve backend geliştirmeleri
+- Veri şifrelemesi için daha güçlü algoritmalar
+- Veri erişim kontrolünü daha da güçlendirmek için mekanizmalar
+
+
+## Sonuç
+VVS, kullanıcıların özel verilerini güvenli bir şekilde saklamaları için güçlü bir çözüm sunmaktadır.
+
 ---
-**Not:** Bu proje şu anda sadece akıllı kontrat kısmını içermektedir. Frontend ve backend geliştirmeleri; gelecekteki planlarımız arasında yer almaktadır.
