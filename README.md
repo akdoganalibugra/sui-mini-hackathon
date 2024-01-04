@@ -1,67 +1,24 @@
 # Veritas Vault Service (VVS)
 
-Bu repo, Rise in Organizasyonu tarafından düzenlenen "Move On Sui Mini Hackathon" etkinliği bünyesinde geliştirilen projeyi içermektedir.
+Veritas Vault Service (VVS) is a blockchain-based service that aims to improve the data security and management of users (individual, enterprise).
 
-## Proje Hedefi
+## Summary
 
-Veritas Vault Service (VVS), Sui Network üzerinde kullanıcıların özel verilerini güvenli bir şekilde saklamalarını sağlamak üzere tasarlanmış bir akıllı kontrat projesidir. Kullanıcılar, blok zincir üzerinde özel verilerini depolayabilir ve sadece kendilerinin erişebileceği bir şekilde bu verilere ulaşabilir. Temel amacımız, kullanıcılara kendi veri kasalarını oluşturma ve yönetme imkanı sunarak veri gizliliğini en üst düzeye çıkarmaktır.
+Veritas Vault Service (VVS) is a decentralized application (dapp) project designed to enable users to securely store their private data on the Sui Network. Users can store their private data on the blockchain and access this data in a way that only they can access. Our main goal is to maximize data privacy by offering users the opportunity to create and manage their own data vaults.
 
-## Proje Amaçları
+## Objectives
 
-- Kullanıcılara, blok zincir üzerinde güvenli bir şekilde veri depolama kasası imkanı sağlamak.
-- Verilerin sadece sahipleri tarafından okunabilir olmasını sağlamak.
-- Kullanıcıların kişisel veri güvenliğini en üst düzeye çıkarmak.
+- Providing users with the capability to securely store data vaults on the blockchain.
+- Ensuring that data is readable only by its owners.
+- Maximizing the personal data security of users.
 
-## Proje Kapsamı
+## Vision and Mission
 
-Bu projenin odak noktası, akıllı kontrat geliştirmektir. Şu aşamada frontend ve backend geliştirmeleri projenin kapsamında yer almamaktadır.
+**Vision:** Veritas Vault Service aims to be a leading solution in securely managing and storing digital assets for users.
 
-## Fikir Özeti
+**Mission:** To safeguard user data privacy and provide a secure environment in the digital world by empowering users to control their own data vaults.
 
-Veritas Vault Service, kullanıcıların güvenli bir şekilde özel verilerini saklamalarını sağlayarak dijital güvenliği artırmayı hedefler. Akıllı kontrat sayesinde, kullanıcılar verilerini blok zincirine güvenli bir şekilde gönderebilir ve sadece kendi özel anahtarları ile bu verilere erişebilir.
-
-## Vizyon ve Misyon
-
-**Vizyon:** Veritas Vault Service, bireylere dijital varlıklarını güvenle yönetme ve depolama konusunda lider bir çözüm sunmayı amaçlamaktadır.
-
-**Misyon:** Kullanıcıların veri gizliliğini korumak ve onlara kendi veri kasalarını kontrol etme imkanı sunarak dijital dünyada güvenli bir ortam sağlamak.
-
-## İş Akışı
-
-1. Kullanıcılar, Sui Network üzerinde geliştirilen Move akıllı kontratı aracılığıyla blok zincire özel verilerini güvenli bir şekilde gönderir.
-2. Akıllı kontrat, bu verileri güvenli bir şekilde depolar ve sadece sahibi tarafından erişilebilecek şekilde saklar.
-3. Kullanıcılar, kendi özel anahtarları ile akıllı kontrat aracılığıyla verilerine erişebilirler.
-
-## Teknik
-
-### Güvenlik
-
-VVS, verileri Sui Network üzerinde güvenli bir şekilde akıllı kontrat aracılığıyla depolar. Verilerin sahipliği, kullanıcı adresinin özel anahtarı kullanılarak yapılır. Bu sayede, veriler sadece kullanıcının kendisi tarafından okunabilir.
-
-### Akıllı Kontrat
-
-Bu kod, VVS gereksinimleri gereği ilk aşama olarak aşağıdaki özelliklerini sağlar:
-
-```
-DataVault yapısı: Veri kasasını temsil eder, veri sahibini (owner) ve verileri (data) içerir.
-
-create() metodu, yeni bir veri kasası oluşturur.
-
-add_data() metodu, veri kasasına veri ekler.
-
-get_data() metodu, veri kasasından veri alır.
-```
-## Gelecekteki Geliştirmeler
-
-VVS projesinin gelecekteki geliştirmeleri arasında şunlar yer almaktadır:
-
-- Akıllı kontrat update & optimizasyon
-- Frontend ve backend geliştirmeleri
-- Veri şifrelemesi için daha güçlü algoritmalar
-- Veri erişim kontrolünü daha da güçlendirmek için mekanizmalar
-
-
-## Sonuç
-VVS, kullanıcıların özel verilerini güvenli bir şekilde saklamaları için güçlü bir çözüm sunmaktadır.
+## Conclusion
+VVS, provides a robust solution for users to securely store and retrieve their private data.
 
 ---
